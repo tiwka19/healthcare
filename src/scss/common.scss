@@ -17,9 +17,21 @@
 }
 
 .loading {
-	background-color: #E6E6E6;
+	background-color: #e6e6e6;
 	border-radius: rem(10);
 	padding: rem(30);
 	text-align: center;
-	font-size: rem(30);
+	@include adaptiveValue('font-size', 30, 24);
+	line-height: math.div(40, 30);
+}
+
+.ssl {
+	background-color: #59a65c;
+	border-radius: rem(25);
+	text-align: center;
+	padding: rem(10) rem(15);
+	margin: 0 auto;
+	color: #fff;
+	max-width: rem(250);
+	text-transform: uppercase;
 }
