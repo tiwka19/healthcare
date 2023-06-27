@@ -6,7 +6,8 @@ import { flsModules } from './modules.js'
 // Получаем все блоки и кнопки
 const blocks = Array.from(document.querySelectorAll('.quiz-item'))
 const completionText = document.getElementById('completion-text')
-const progressBar = document.getElementById('progress-bar');
+const progressBar = document.getElementById('progress-bar')
+const loadingBlock = document.getElementById('loading-block')
 // Индекс текущего блока
 let currentIndex = 0
 
@@ -16,6 +17,7 @@ const hideAllBlocks = () => {
 		block.style.display = 'none'
 	})
 	completionText.style.display = 'none'
+	loadingBlock.style.display = 'none'
 }
 
 // Функция для отображения текущего блока или завершающего текста
@@ -24,14 +26,19 @@ const showCurrentBlock = () => {
 		// Показываем завершающий текст
 		hideAllBlocks()
 		completionText.style.display = 'flex'
+		loadingBlock.style.display = 'block'
 		document.querySelector('.wrapper-page').classList.add('_hide')
-		document.querySelector('.wrapper').classList.add('_active')
+		setTimeout(() => {
+			loadingBlock.style.display = 'none'
+			document.querySelector('.quiz__container .quiz-complete').style.display =
+				'flex'
+		}, 15000)
+		// document.querySelector('.wrapper').classList.add('_active')
 	} else {
 		// Показываем текущий блок
 		hideAllBlocks()
 		blocks[currentIndex].style.display = 'block'
-
-		updateProgressBar();
+		updateProgressBar()
 
 		// Обработчики событий для кнопок внутри блока
 		const buttons = blocks[currentIndex].querySelectorAll('button')
@@ -41,6 +48,27 @@ const showCurrentBlock = () => {
 	}
 }
 
+const updateLoadingText = () => {
+	const loadingTextElement = loadingBlock.querySelector('.loading-text')
+
+	setInterval(() => {
+		const currentText = loadingTextElement.textContent
+		let newText
+
+		switch (currentText) {
+			case 'Matching You with the Best Options...':
+				newText = 'Reviewing Tour Answers...'
+				break
+			case 'Reviewing Tour Answers...':
+				newText = 'Confirming Eligibility...'
+				break
+		}
+		loadingTextElement.textContent = newText
+	}, 7000)
+}
+
+updateLoadingText()
+
 // Функция для переключения на следующий блок
 const nextBlock = () => {
 	currentIndex++
@@ -48,16 +76,12 @@ const nextBlock = () => {
 }
 
 const updateProgressBar = () => {
-  const progress = ((currentIndex + 1) / blocks.length) * 100;
-  progressBar.style.width = `${progress}%`;
-};
-
+	const progress = ((currentIndex + 1) / blocks.length) * 100
+	progressBar.style.width = `${progress}%`
+}
 
 // Показываем первый блок
 showCurrentBlock()
-
-
-
 
 // Функция для проверки, долисталась ли страница до конца
 function isPageFullyScrolled() {
@@ -92,4 +116,4 @@ window.addEventListener('scroll', addActiveClassToBlock)
 
 setTimeout(() => {
 	flsModules.popup.open('#popup')
-}, 20000)
+}, 40000)
