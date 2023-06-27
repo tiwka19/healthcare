@@ -24,6 +24,23 @@
 		text-align: center;
 		@include adaptiveValue('font-size', 22, 18);
 		line-height: math.div(28, 22);
+		margin-bottom: rem(20);
+	}
+	&__callback {
+		background-color: #ffd869;
+		padding: rem(20);
+		border-radius: 10px;
+		font-size: rem(20);
+		line-height: math.div(28, 20);
+		a {
+			color: #3771e0;
+			font-weight: 600;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }
 
@@ -76,9 +93,8 @@
 		align-items: center;
 		flex-direction: column;
 		gap: rem(15);
-		@media (max-width:$mobile){
-			 align-items: flex-start; 
-			 text-align: center;
+		@media (max-width: $mobile) {
+			text-align: center;
 		}
 	}
 	&-complete__title {
@@ -109,7 +125,6 @@
 		span:last-child {
 			font-weight: 600;
 		}
-		
 	}
 }
 
