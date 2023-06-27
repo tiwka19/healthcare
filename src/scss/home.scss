@@ -49,14 +49,9 @@
 	margin: 0 auto;
 	padding: rem(50) 0;
 	&__container {
-		padding-top: rem(50);
-		padding-bottom: rem(50);
-		@media (min-width: $mobile) {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-		}
+		padding-top: rem(100);
+		padding-bottom: rem(100);
+		max-width: rem(768);
 		display: none;
 	}
 	&-item__title {

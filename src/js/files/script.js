@@ -6,7 +6,7 @@ import { flsModules } from './modules.js'
 // Получаем все блоки и кнопки
 const blocks = Array.from(document.querySelectorAll('.quiz-item'))
 const completionText = document.getElementById('completion-text')
-
+const progressBar = document.getElementById('progress-bar');
 // Индекс текущего блока
 let currentIndex = 0
 
@@ -31,6 +31,8 @@ const showCurrentBlock = () => {
 		hideAllBlocks()
 		blocks[currentIndex].style.display = 'block'
 
+		updateProgressBar();
+
 		// Обработчики событий для кнопок внутри блока
 		const buttons = blocks[currentIndex].querySelectorAll('button')
 		buttons.forEach(button => {
@@ -45,8 +47,17 @@ const nextBlock = () => {
 	showCurrentBlock()
 }
 
+const updateProgressBar = () => {
+  const progress = ((currentIndex + 1) / blocks.length) * 100;
+  progressBar.style.width = `${progress}%`;
+};
+
+
 // Показываем первый блок
 showCurrentBlock()
+
+
+
 
 // Функция для проверки, долисталась ли страница до конца
 function isPageFullyScrolled() {

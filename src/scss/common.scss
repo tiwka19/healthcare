@@ -7,3 +7,11 @@
 		display: block;
 	}
 }
+
+#progress-bar {
+	margin-bottom: rem(30);
+	width: 100%;
+	height: 5px;
+	background-color: #3771e0;
+	transition: all 0.3s;
+}
