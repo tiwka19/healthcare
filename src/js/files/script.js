@@ -33,7 +33,7 @@ const showCurrentBlock = () => {
 			document.querySelector('.quiz__container .quiz-complete').style.display =
 				'flex'
 		}, 15000)
-		// document.querySelector('.wrapper').classList.add('_active')
+		document.querySelector('.wrapper').classList.add('_active')
 	} else {
 		// Показываем текущий блок
 		hideAllBlocks()
@@ -54,7 +54,6 @@ const updateLoadingText = () => {
 	setInterval(() => {
 		const currentText = loadingTextElement.textContent
 		let newText
-
 		switch (currentText) {
 			case 'Matching You with the Best Options...':
 				newText = 'Reviewing Tour Answers...'
