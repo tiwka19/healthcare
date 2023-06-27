@@ -1,1 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.wrapper-page._hide {
+	display: none;
+}
+.wrapper._active {
+	.quiz__container {
+		display: block;
+	}
+}

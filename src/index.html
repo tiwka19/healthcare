@@ -5,191 +5,216 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<div class="hero">
-					<div class="hero__container">
-						<div class="hero__data">
-							<h1 class="hero__title">
-								Congress Approves FREE Health Insurance Plans for Millions of
-								Americans. Do You Qualify?
-							</h1>
-							<img
-								src="@img/hero.jpg"
-								width="840"
-								height="475"
-								alt="hero"
-								class="hero__image"
-							/>
-							<p class="hero__descr">
-								Millions of low and middle-class income earners qualify for Free
-								Health Care and just don’t know it. To see if you qualify just
-								select your age below (9 out of 10 Americans that apply for this
-								program qualify for a free health plan).
-							</p>
-							<div class="hero__callback">
-								These plans are limited on a first come, first serve basis.
-								<a href="tel:8888022462">Call the Hotline</a> now to check if you qualify. The
-								phone number is: <a href="tel:8888022462">888-802-2462</a>
+				<div class="wrapper-page">
+					<div class="hero">
+						<div class="hero__container">
+							<div class="hero__data">
+								<h1 class="hero__title">
+									Congress Approves FREE Health Insurance Plans for Millions of
+									Americans. Do You Qualify?
+								</h1>
+								<img
+									src="@img/hero.jpg"
+									width="840"
+									height="475"
+									alt="hero"
+									class="hero__image"
+								/>
+								<p class="hero__descr">
+									Millions of low and middle-class income earners qualify for
+									Free Health Care and just don’t know it. To see if you qualify
+									just select your age below (9 out of 10 Americans that apply
+									for this program qualify for a free health plan).
+								</p>
+								<div class="hero__callback">
+									These plans are limited on a first come, first serve basis.
+									<a href="tel:8888022462">Call the Hotline</a> now to check if
+									you qualify. The phone number is:
+									<a href="tel:8888022462">888-802-2462</a>
+								</div>
+							</div>
+							<div class="hero__quiz quiz">
+								<div class="hero__quiz-item quiz-item block">
+									<h2 class="quiz-item__title">Your total annual income?</h2>
+									<p class="quiz-item__descr">
+										Millions of low and middle-class income earners qualify for
+										Free Health
+									</p>
+									<div class="quiz-item__buttons">
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+									</div>
+								</div>
+
+								<div class="hero__quiz-item quiz-item block">
+									<h2 class="quiz-item__title">Your total annual income? 2</h2>
+									<p class="quiz-item__descr">
+										Millions of low and middle-class income earners qualify for
+										Free Health
+									</p>
+									<div class="quiz-item__buttons">
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+									</div>
+								</div>
+
+								<div class="hero__quiz-item quiz-item block">
+									<h2 class="quiz-item__title">Your total annual income? 3</h2>
+									<p class="quiz-item__descr">
+										Millions of low and middle-class income earners qualify for
+										Free Health
+									</p>
+									<div class="quiz-item__buttons">
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+										<button class="quiz-item__button">Less than $40 000</button>
+									</div>
+								</div>
+
+								<div id="completion-text" class="quiz-complete">
+									<div class="quiz-complete__title">
+										Your total annual income?
+									</div>
+									<p class="quiz-complete__descr">
+										Millions of low and middle-class income earners qualify for
+										Free Health
+									</p>
+									<a href="tel:8888022462" class="quiz-complete__button"
+										>888-802-2462</a
+									>
+									<div class="quiz-complete__data">
+										<span>Call today!</span>
+										<span>Millions of low and middle-class income</span>
+										<span>5 minutes.</span>
+									</div>
+								</div>
+								<div
+									id="completion-text"
+									class="quiz-complete"
+									style="display: none"
+								>
+									<div class="quiz-complete__title">
+										Your total annual income?
+									</div>
+									<p class="quiz-complete__descr">
+										Millions of low and middle-class income earners qualify for
+										Free Health
+									</p>
+									<a href="tel:8888022462" class="quiz-complete__button"
+										>888-802-2462</a
+									>
+									<div class="quiz-complete__data">
+										<span>Call today!</span>
+										<span>Millions of low and middle-class income</span>
+										<span>5 minutes.</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="hero__quiz quiz">
-							<div class="hero__quiz-item quiz-item">
-								<h2 class="quiz-item__title">Your total annual income?</h2>
-								<p class="quiz-item__descr">
-									Millions of low and middle-class income earners qualify for
-									Free Health
-								</p>
-								<div class="quiz-item__buttons">
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
+					</div>
+					<div class="customers">
+						<div class="customers__container">
+							<h2 class="customers__title">Our Customers Have a Lot to Say</h2>
+							<p class="customers__text">
+								We've helped over 5 million find health insurance—each customer
+								gets the same quality service.
+							</p>
+							<div class="customers__items">
+								<div class="customers__item">
+									<div class="customers__item-img">
+										<img
+											src="@img/customer-1.png"
+											width="55"
+											height="55"
+											alt="customer"
+										/>
+									</div>
+									<div class="customers__item-data">
+										<div class="customers__item-name">Maxim</div>
+										<p class="customers__item-text">
+											Millions of low and middle-class income earners qualify
+											for Free...
+										</p>
+									</div>
 								</div>
-							</div>
-
-							<div class="hero__quiz-item quiz-item">
-								<h2 class="quiz-item__title">Your total annual income? 2</h2>
-								<p class="quiz-item__descr">
-									Millions of low and middle-class income earners qualify for
-									Free Health
-								</p>
-								<div class="quiz-item__buttons">
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
+								<div class="customers__item">
+									<div class="customers__item-img">
+										<img
+											src="@img/customer-2.png"
+											width="55"
+											height="55"
+											alt="customer"
+										/>
+									</div>
+									<div class="customers__item-data">
+										<div class="customers__item-name">Maxim</div>
+										<p class="customers__item-text">
+											Millions of low and middle-class income earners qualify
+											for Free...
+										</p>
+									</div>
 								</div>
-							</div>
-
-							<div class="hero__quiz-item quiz-item">
-								<h2 class="quiz-item__title">Your total annual income? 3</h2>
-								<p class="quiz-item__descr">
-									Millions of low and middle-class income earners qualify for
-									Free Health
-								</p>
-								<div class="quiz-item__buttons">
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
-									<button class="quiz-item__button">Less than $40 000</button>
+								<div class="customers__item">
+									<div class="customers__item-img">
+										<img
+											src="@img/customer-3.png"
+											width="55"
+											height="55"
+											alt="customer"
+										/>
+									</div>
+									<div class="customers__item-data">
+										<div class="customers__item-name">Maxim</div>
+										<p class="customers__item-text">
+											Millions of low and middle-class income earners qualify
+											for Free...
+										</p>
+									</div>
 								</div>
-							</div>
-
-							<div id="completion-text" class="quiz-complete">
-								<div class="quiz-complete__title">
-									Your total annual income?
-								</div>
-								<p class="quiz-complete__descr">
-									Millions of low and middle-class income earners qualify for
-									Free Health
-								</p>
-								<a href="tel:8888022462" class="quiz-complete__button"
-									>888-802-2462</a
-								>
-								<div class="quiz-complete__data">
-									<span>Call today!</span>
-									<span>Millions of low and middle-class income</span>
-									<span>5 minutes.</span>
-								</div>
-							</div>
-							<div
-								id="completion-text"
-								class="quiz-complete"
-								style="display: none"
-							>
-								<div class="quiz-complete__title">
-									Your total annual income?
-								</div>
-								<p class="quiz-complete__descr">
-									Millions of low and middle-class income earners qualify for
-									Free Health
-								</p>
-								<a href="tel:8888022462" class="quiz-complete__button"
-									>888-802-2462</a
-								>
-								<div class="quiz-complete__data">
-									<span>Call today!</span>
-									<span>Millions of low and middle-class income</span>
-									<span>5 minutes.</span>
+								<div class="customers__item">
+									<div class="customers__item-img">
+										<img
+											src="@img/customer-4.png"
+											width="55"
+											height="55"
+											alt="customer"
+										/>
+									</div>
+									<div class="customers__item-data">
+										<div class="customers__item-name">Maxim</div>
+										<p class="customers__item-text">
+											Millions of low and middle-class income earners qualify
+											for Free...
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="customers">
-					<div class="customers__container">
-						<h2 class="customers__title">Our Customers Have a Lot to Say</h2>
-						<p class="customers__text">
-							We've helped over 5 million find health insurance—each customer
-							gets the same quality service.
+
+				<div class="quiz__container">
+					<div class="quiz-complete">
+						<div class="quiz-complete__title">
+							Your total annual income?
+						</div>
+						<p class="quiz-complete__descr">
+							Millions of low and middle-class income earners qualify for
+							Free Health
 						</p>
-						<div class="customers__items">
-							<div class="customers__item">
-								<div class="customers__item-img">
-									<img
-										src="@img/customer-1.png"
-										width="55"
-										height="55"
-										alt="customer"
-									/>
-								</div>
-								<div class="customers__item-data">
-									<div class="customers__item-name">Maxim</div>
-									<p class="customers__item-text">
-										Millions of low and middle-class income earners qualify for
-										Free...
-									</p>
-								</div>
-							</div>
-							<div class="customers__item">
-								<div class="customers__item-img">
-									<img
-										src="@img/customer-2.png"
-										width="55"
-										height="55"
-										alt="customer"
-									/>
-								</div>
-								<div class="customers__item-data">
-									<div class="customers__item-name">Maxim</div>
-									<p class="customers__item-text">
-										Millions of low and middle-class income earners qualify for
-										Free...
-									</p>
-								</div>
-							</div>
-							<div class="customers__item">
-								<div class="customers__item-img">
-									<img
-										src="@img/customer-3.png"
-										width="55"
-										height="55"
-										alt="customer"
-									/>
-								</div>
-								<div class="customers__item-data">
-									<div class="customers__item-name">Maxim</div>
-									<p class="customers__item-text">
-										Millions of low and middle-class income earners qualify for
-										Free...
-									</p>
-								</div>
-							</div>
-							<div class="customers__item">
-								<div class="customers__item-img">
-									<img
-										src="@img/customer-4.png"
-										width="55"
-										height="55"
-										alt="customer"
-									/>
-								</div>
-								<div class="customers__item-data">
-									<div class="customers__item-name">Maxim</div>
-									<p class="customers__item-text">
-										Millions of low and middle-class income earners qualify for
-										Free...
-									</p>
-								</div>
-							</div>
+						<a href="tel:8888022462" class="quiz-complete__button"
+							>888-802-2462</a
+						>
+						<div class="quiz-complete__data">
+							<span>Call today!</span>
+							<span>Millions of low and middle-class income</span>
+							<span>5 minutes.</span>
 						</div>
 					</div>
+				</div>
+			
 				</div>
 			</main>
 			@@include('html/_popup.htm',{}) @@include('html/_footer.htm',{})

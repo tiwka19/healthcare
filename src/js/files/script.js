@@ -24,11 +24,13 @@ const showCurrentBlock = () => {
 		// Показываем завершающий текст
 		hideAllBlocks()
 		completionText.style.display = 'flex'
+		document.querySelector('.wrapper-page').classList.add('_hide')
+		document.querySelector('.wrapper').classList.add('_active')
 	} else {
 		// Показываем текущий блок
 		hideAllBlocks()
 		blocks[currentIndex].style.display = 'block'
-
+		
 		// Обработчики событий для кнопок внутри блока
 		const buttons = blocks[currentIndex].querySelectorAll('button')
 		buttons.forEach(button => {
@@ -76,8 +78,6 @@ function addActiveClassToBlock() {
 
 // Обработчик события прокрутки страницы
 window.addEventListener('scroll', addActiveClassToBlock)
-
-
 
 setTimeout(() => {
 	flsModules.popup.open('#popup')
