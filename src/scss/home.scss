@@ -50,6 +50,7 @@
 	padding: rem(50) 0;
 	&__container {
 		padding-top: rem(50);
+		padding-bottom: rem(50);
 		@media (min-width: $mobile) {
 			position: absolute;
 			left: 50%;
