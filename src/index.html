@@ -60,7 +60,9 @@
 										What is your household total annual income?
 									</h2>
 									<div class="quiz-item__buttons">
-										<button class="quiz-item__button">Less than 50 k/yr</button>
+										<button class="quiz-item__button" data-failed>
+											Less than 50 k/yr
+										</button>
 										<button class="quiz-item__button">More than 50 k/yr</button>
 									</div>
 								</div>
@@ -70,7 +72,7 @@
 										Are you currently enrolled in Medicare Parts A or B?
 									</h2>
 									<div class="quiz-item__buttons">
-										<button class="quiz-item__button">Yes</button>
+										<button class="quiz-item__button" data-failed>Yes</button>
 										<button class="quiz-item__button">No</button>
 										<button class="quiz-item__button">I'm not sure</button>
 									</div>
@@ -217,6 +219,13 @@
 							<span>Millions of low and middle-class income</span>
 							<span>5 minutes.</span>
 						</div>
+					</div>
+					<div class="quiz-failed">
+						<div class="quiz-complete__title">Sorry, we can't help you.</div>
+						<p class="quiz-complete__descr">
+							The questions your answered have helped us determine that we are
+							not able you at this time.
+						</p>
 					</div>
 				</div>
 			</main>

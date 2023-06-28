@@ -10,6 +10,7 @@ const progressBar = document.getElementById('progress-bar')
 const loadingBlock = document.getElementById('loading-block')
 // Индекс текущего блока
 let currentIndex = 0
+let complete = true
 
 // Функция для скрытия всех блоков и завершающего текста
 const hideAllBlocks = () => {
@@ -24,14 +25,21 @@ const hideAllBlocks = () => {
 const showCurrentBlock = () => {
 	if (currentIndex === blocks.length) {
 		// Показываем завершающий текст
+
 		hideAllBlocks()
 		completionText.style.display = 'flex'
 		loadingBlock.style.display = 'block'
 		document.querySelector('.wrapper-page').classList.add('_hide')
 		setTimeout(() => {
 			loadingBlock.style.display = 'none'
-			document.querySelector('.quiz__container .quiz-complete').style.display =
-				'flex'
+			if (complete == false) {
+				document.querySelector('.quiz__container .quiz-failed').style.display =
+					'flex'
+			} else {
+				document.querySelector(
+					'.quiz__container .quiz-complete'
+				).style.display = 'flex'
+			}
 		}, 15000)
 		document.querySelector('.wrapper').classList.add('_active')
 	} else {
@@ -43,14 +51,16 @@ const showCurrentBlock = () => {
 		// Обработчики событий для кнопок внутри блока
 		const buttons = blocks[currentIndex].querySelectorAll('button')
 		buttons.forEach(button => {
-			button.addEventListener('click', nextBlock)
+			button.addEventListener('click', () => {
+				nextBlock()
+				button.hasAttribute('data-failed') ? complete = false : complete = true;
+			})
 		})
 	}
 }
 
 const updateLoadingText = () => {
 	const loadingTextElement = loadingBlock.querySelector('.loading-text')
-
 	setInterval(() => {
 		const currentText = loadingTextElement.textContent
 		let newText
