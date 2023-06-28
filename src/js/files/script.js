@@ -1,6 +1,5 @@
-// Підключення функціоналу "Чертоги Фрілансера"
+
 import { isMobile } from './functions.js'
-// Підключення списку активних модулів
 import { flsModules } from './modules.js'
 
 // Получаем все блоки и кнопки
@@ -38,7 +37,7 @@ const showCurrentBlock = () => {
 						break
 				}
 				loadingTextElement.textContent = newText
-			}, 3000)
+			}, 2000)
 		}
 		updateLoadingText()
 		// Показываем завершающий текст
@@ -56,9 +55,10 @@ const showCurrentBlock = () => {
 					'.quiz__container .quiz-complete'
 				).style.display = 'flex'
 			}
-		}, 9000)
+		}, 6000)
 		document.querySelector('.wrapper').classList.add('_active')
 	} else {
+
 		// Показываем текущий блок
 		hideAllBlocks()
 		blocks[currentIndex].style.display = 'block'
