@@ -40,7 +40,7 @@ const showCurrentBlock = () => {
 					'.quiz__container .quiz-complete'
 				).style.display = 'flex'
 			}
-		}, 15000)
+		}, 10000)
 		document.querySelector('.wrapper').classList.add('_active')
 	} else {
 		// Показываем текущий блок
@@ -60,7 +60,7 @@ const showCurrentBlock = () => {
 }
 
 const updateLoadingText = () => {
-	const loadingTextElement = loadingBlock.querySelector('.loading-text')
+	const loadingTextElement = loadingBlock.querySelector('.loading-text');
 	setInterval(() => {
 		const currentText = loadingTextElement.textContent
 		let newText
@@ -73,7 +73,7 @@ const updateLoadingText = () => {
 				break
 		}
 		loadingTextElement.textContent = newText
-	}, 7000)
+	}, 5000)
 }
 
 updateLoadingText()
