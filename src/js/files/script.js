@@ -24,8 +24,24 @@ const hideAllBlocks = () => {
 // Функция для отображения текущего блока или завершающего текста
 const showCurrentBlock = () => {
 	if (currentIndex === blocks.length) {
+		const updateLoadingText = () => {
+			const loadingTextElement = loadingBlock.querySelector('.loading-text')
+			setInterval(() => {
+				const currentText = loadingTextElement.textContent
+				let newText
+				switch (currentText) {
+					case 'Matching You with the Best Options...':
+						newText = 'Reviewing Tour Answers...'
+						break
+					case 'Reviewing Tour Answers...':
+						newText = 'Confirming Eligibility...'
+						break
+				}
+				loadingTextElement.textContent = newText
+			}, 3000)
+		}
+		updateLoadingText()
 		// Показываем завершающий текст
-
 		hideAllBlocks()
 		completionText.style.display = 'flex'
 		loadingBlock.style.display = 'block'
@@ -40,7 +56,7 @@ const showCurrentBlock = () => {
 					'.quiz__container .quiz-complete'
 				).style.display = 'flex'
 			}
-		}, 10000)
+		}, 9000)
 		document.querySelector('.wrapper').classList.add('_active')
 	} else {
 		// Показываем текущий блок
@@ -53,30 +69,13 @@ const showCurrentBlock = () => {
 		buttons.forEach(button => {
 			button.addEventListener('click', () => {
 				nextBlock()
-				button.hasAttribute('data-failed') ? complete = false : complete = true;
+				button.hasAttribute('data-failed')
+					? (complete = false)
+					: (complete = true)
 			})
 		})
 	}
 }
-
-const updateLoadingText = () => {
-	const loadingTextElement = loadingBlock.querySelector('.loading-text');
-	setInterval(() => {
-		const currentText = loadingTextElement.textContent
-		let newText
-		switch (currentText) {
-			case 'Matching You with the Best Options...':
-				newText = 'Reviewing Tour Answers...'
-				break
-			case 'Reviewing Tour Answers...':
-				newText = 'Confirming Eligibility...'
-				break
-		}
-		loadingTextElement.textContent = newText
-	}, 5000)
-}
-
-updateLoadingText()
 
 // Функция для переключения на следующий блок
 const nextBlock = () => {
